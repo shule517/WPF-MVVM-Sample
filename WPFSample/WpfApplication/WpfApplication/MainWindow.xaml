@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid Margin="0,0,0.429,0.143">
+        <Button x:Name="buttonPlus" Content="＋" Margin="76,83,368.429,0" VerticalAlignment="Top" Command="{Binding PlusCommand}" CommandParameter="{Binding Input}"/>
+        <Button x:Name="buttonMinus" Content="ー" HorizontalAlignment="Left" Margin="166,83,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.536,0.686"  Command="{Binding MinusCommand}" CommandParameter="{Binding Input}"/>
+        <Button x:Name="buttonMulti" Content="×" HorizontalAlignment="Left" Margin="258,83,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.536,0.686"  Command="{Binding MultiCommand}" CommandParameter="{Binding Input}"/>
+        <Button x:Name="buttonDiv" Content="÷" Margin="362,83,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.536,0.686" HorizontalAlignment="Left" Width="75"  Command="{Binding DivCommand}" CommandParameter="{Binding Input}"/>
+        <TextBox x:Name="textBoxInputA" HorizontalAlignment="Left" Height="23" Margin="122,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding InputA}"/>
+        <TextBox x:Name="textBoxInputB" HorizontalAlignment="Left" Height="23" Margin="317,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding InputB}"/>
+        <TextBox x:Name="textBoxResult" HorizontalAlignment="Left" Height="23" Margin="134,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Text="{Binding Result}"/>
+        <Label x:Name="labelInputA" Content="入力Ａ：" HorizontalAlignment="Left" Margin="64,40,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelInputB" Content="入力Ｂ：" HorizontalAlignment="Left" Margin="259,37,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="labelResult" Content="計算結果：" HorizontalAlignment="Left" Margin="64,200,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
